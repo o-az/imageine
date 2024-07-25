@@ -31,9 +31,7 @@ jobs:
         run: bun install
 
       - name: 'Lint'
-        run: |
-          bun lint
-          bun format
+        run: bunx biome check .
 
       - name: 'Type Check'
         run: bun typecheck
