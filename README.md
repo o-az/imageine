@@ -1,6 +1,6 @@
 
 given this image
-https://images.pexels.com/photos/27001883/pexels-photo-27001883/free
+https://images.pexels.com/photos/27001883/pexels-photo-27001883/free-photo-of-a-white-car-is-driving-down-a-city-street.jpeg
 
 chnge sizs
 https://ipx.up.railway.app/s_200x200/https://images.pexels.com/photos/27001883/pexels-photo-27001883/free-photo-of-a-white-car-is-driving-down-a-city-street.jpeg
