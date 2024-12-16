@@ -2,6 +2,7 @@
   "name": "imageine",
   "type": "module",
   "private": true,
+  "packageManager": "pnpm@9.15.0",
   "scripts": {
     "dev": "node --env-file=.env --import=tsx --watch ./src/index.ts",
     "start": "node --import=tsx ./src/index.ts",
