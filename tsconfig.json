@@ -28,8 +28,8 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "noPropertyAccessFromIndexSignature": true,
-    "types": ["node", "bun"]
+    "types": ["node"]
   },
-  "include": ["src", "scripts"],
-  "files": ["reset.d.ts", "environment.d.ts"]
+  "include": ["src"],
+  "files": ["environment.d.ts"]
 }

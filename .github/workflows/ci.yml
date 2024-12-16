@@ -22,16 +22,22 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@v4
 
-      - name: 'Setup bun'
-        uses: oven-sh/setup-bun@v2
+      - name: '🍂 Setup pnpm'
+        uses: pnpm/action-setup@v4
         with:
-          bun-version: 'latest'
+          version: latest
 
-      - name: 'Install Dependencies'
-        run: bun install
+      - name: '🐢 Setup Node.js'
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          node-version: 'lts/*'
 
-      - name: 'Lint'
-        run: bunx biome check .
+      - name: '📦 Install Dependencies'
+        run: pnpm install
+
+      - name: 'Lint & Format'
+        run: pnpm dlx @biomejs/biome check . --reporter='github'
 
       - name: 'Type Check'
-        run: bun typecheck
+        run: pnpm typecheck

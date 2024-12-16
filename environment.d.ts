@@ -8,7 +8,3 @@ declare module NodeJS {
     readonly NODE_ENV: 'development' | 'production' | 'test'
   }
 }
-
-declare module 'bun' {
-  interface Env extends EnvironmentVariables {}
-}

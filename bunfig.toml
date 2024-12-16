@@ -1,7 +1,0 @@
-telemetry = false
-
-[run]
-bun = true
-
-[install]
-dryRun = false

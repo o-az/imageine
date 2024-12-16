@@ -3,29 +3,23 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun --watch --hot ./src/index.ts",
-    "start": "bun ./src/index.ts",
+    "dev": "node --env-file=.env --import=tsx --watch ./src/index.ts",
+    "start": "node --import=tsx ./src/index.ts",
     "typecheck": "tsc --project tsconfig.json --noEmit",
-    "format": "node_modules/@biomejs/cli-linux-arm64-musl/biome format . --log-level='info' --log-kind='pretty' --error-on-warnings --diagnostic-level='info' --write",
-    "lint": "node_modules/@biomejs/cli-linux-arm64-musl/biome lint . --error-on-warnings --colors='force' --log-level='info' --log-kind='pretty' --diagnostic-level='info' --apply-unsafe"
+    "format": "biome format . --log-level='info' --log-kind='pretty' --error-on-warnings --diagnostic-level='info' --write",
+    "lint": "biome lint . --error-on-warnings --colors='force' --log-level='info' --log-kind='pretty' --diagnostic-level='info' --apply-unsafe"
   },
   "dependencies": {
-    "h3": "^1.12.0",
+    "h3": "^1.13.0",
     "ipx": "^3.0.1",
-    "listhen": "^1.7.2",
-    "sharp": "^0.33.4"
+    "listhen": "^1.9.0",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.8.3",
-    "@total-typescript/ts-reset": "^0.5.1",
-    "@types/bun": "^1.1.6",
-    "@types/node": "^20.14.12",
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.10.2",
     "consola": "^3.2.3",
-    "tsx": "^4.16.2",
-    "typescript": "^5.5.4"
-  },
-  "trustedDependencies": ["sharp"],
-  "overrides": {
-    "sharp": "$sharp"
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
   }
 }

@@ -22,11 +22,11 @@
           with pkgs;
           pkgs.mkShell {
             buildInputs = [
-              bun
               vips
               biome
               direnv
               nixfmt-rfc-style
+              nodePackages_latest.pnpm
               nodePackages_latest.nodejs
             ];
           };

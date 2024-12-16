@@ -9,10 +9,10 @@ const ipx = createIPX({
   })
 })
 
-const PORT = Number(import.meta.env.PORT) ?? 5_321
+const PORT = Number(process.env.PORT) ?? 5_321
 
 const app = createApp({
-  debug: import.meta.env.DEBUG === 'true'
+  debug: process.env.DEBUG === 'true'
 })
 
 app.use('/', createIPXH3Handler(ipx))
@@ -21,5 +21,5 @@ listen(toNodeListener(app), {
   qr: true,
   port: PORT,
   name: 'imagein',
-  isProd: import.meta.env.NODE_ENV === 'production'
+  isProd: process.env.NODE_ENV === 'production'
 })
